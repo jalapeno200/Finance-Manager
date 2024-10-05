@@ -6,17 +6,71 @@
     <title>Daily Expense Tracker || Add Expense</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Example</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidebar {
+            margin: 0;
+            padding: 0;
+            width: 200px;
+            background-color: #8878c3;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        @media screen and (max-width: 700px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .sidebar a {
+                float: left;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .sidebar a {
+                text-align: center;
+                float: none;
+            }
+        }
+    </style>
+</head>
 <body>
 
-    <!-- Sidebar (Static) -->
     <div style="background-color:#8a2be2;color:white" id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
         <div class="profile-sidebar">
             <div class="profile-usertitle">
+                <!-- Static username instead of dynamic PHP logic -->
                 <div class="profile-usertitle-name" align="center">
-                    <h3><i class="fas fa-user-circle"></i>&nbsp;John Doe</h3>
+                    <h3><i class='fas fa-user-circle'></i>&nbsp;John Doe</h3>
                 </div>
             </div>
         </div>
+
         <div class="sidebar">
             <a class="active" href="dashboard.html">&nbsp; Dashboard</a>
             <a class="active" href="add-expense.html"><em class="fa fa-dashboard">&nbsp;</em> Add Expenses</a>
@@ -25,6 +79,9 @@
             <a class="active" href="logout.html"><em class="fa fa-dashboard">&nbsp;</em> Logout</a>
         </div>
     </div>
+
+</body>
+<body>
 
     <!-- Main Content (Static) -->
     <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
