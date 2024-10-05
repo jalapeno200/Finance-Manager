@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Daily Expense Tracker - Dashboard</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<style>
+		.panel-body {
+			padding: 15px;
+		}
+		.percent {
+			font-size: 24px;
+			font-weight: bold;
+		}
+	</style>
+	<script>
+		// Simulate expense data with JavaScript
+		function loadExpenses() {
+			// Mocked data instead of database queries
+			const todayExpense = 150;
+			const yesterdayExpense = 200;
+			const weeklyExpense = 1000;
+			const monthlyExpense = 3000;
+			const yearlyExpense = 15000;
+			const totalExpense = 20000;
+
+			// Update the dashboard with the simulated data
+			document.getElementById('today-expense').innerText = todayExpense || 0;
+			document.getElementById('yesterday-expense').innerText = yesterdayExpense || 0;
+			document.getElementById('weekly-expense').innerText = weeklyExpense || 0;
+			document.getElementById('monthly-expense').innerText = monthlyExpense || 0;
+			document.getElementById('yearly-expense').innerText = yearlyExpense || 0;
+			document.getElementById('total-expense').innerText = totalExpense || 0;
+		}
+
+		// Call the function to simulate data loading
+		window.onload = loadExpenses;
+	</script>
+</head>
+<body>
+	<header>
+		<!-- Simulated Header -->
+		<h1 align="center">Daily Expense Tracker</h1>
+		<hr>
+	</header>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header text-center">Dashboard</h1>
+			</div>
+		</div><!--/.row-->
+
+		<!-- Dashboard Widgets -->
+		<div class="row">
+			<!-- Today's Expense -->
+			<div class="col-xs-6 col-md-3">
+				<div style="background-color:#e6e6fa;" class="panel panel-default">
+					<div class="panel-body easypiechart-panel">
+						<center><h4>Today's Expense</h4></center>
+						<div class="easypiechart"><span class="percent"><center id="today-expense">0</center></span></div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Yesterday's Expense -->
+			<div class="col-xs-6 col-md-3">
+				<div class="panel panel-default">
+					<div class="panel-body easypiechart-panel" style="background-color:#e6e6fa;">
+						<center><h4>Yesterday's Expense</h4></center>
+						<div class="easypiechart"><span class="percent"><center id="yesterday-expense">0</center></span></div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Last 7 Days' Expense -->
+			<div class="col-xs-6 col-md-3">
+				<div class="panel panel-default">
+					<div class="panel-body easypiechart-panel" style="background-color:#e6e6fa;">
+						<center><h4>Last 7 Days' Expense</h4></center>
+						<div class="easypiechart"><span class="percent"><center id="weekly-expense">0</center></span></div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Last 30 Days' Expense -->
+			<div class="col-xs-6 col-md-3">
+				<div class="panel panel-default">
+					<div class="panel-body easypiechart-panel" style="background-color:#e6e6fa;">
+						<center><h4>Last 30 Days' Expense</h4></center>
+						<div class="easypiechart"><span class="percent"><center id="monthly-expense">0</center></span></div>
+					</div>
+				</div>
+			</div>
+		</div><!--/.row-->
+
+		<div class="row">
+			<!-- Yearly Expense -->
+			<div class="col-xs-6 col-md-3">
+				<div class="panel panel-default">
+					<div class="panel-body easypiechart-panel" style="background-color:#e6e6fa;">
+						<center><h4>Current Year Expenses</h4></center>
+						<div class="easypiechart"><span class="percent"><center id="yearly-expense">0</center></span></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Total Expense -->
+			<div class="col-xs-6 col-md-3">
+				<div class="panel panel-default">
+					<div class="panel-body easypiechart-panel" style="background-color:#e6e6fa;">
+						<center><h4>Total Expenses</h4></center>
+						<div class="easypiechart"><span class="percent"><center id="total-expense">0</center></span></div>
+					</div>
+				</div>
+			</div>
+		</div><!--/.row-->
+	</div><!--/.main-->
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Expense Tracker || Datewise Expense Report</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+
+    <!-- Sidebar (Static) -->
+    <div style="background-color:#8a2be2;color:white" id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+        <div class="profile-sidebar">
+            <div class="profile-usertitle">
+                <div class="profile-usertitle-name" align="center">
+                    <h3><i class="fas fa-user-circle"></i>&nbsp;John Doe</h3>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <a class="active" href="dashboard.html">&nbsp; Dashboard</a>
+            <a class="active" href="add-expense.html"><em class="fa fa-dashboard">&nbsp;</em> Add Expenses</a>
+            <a class="active" href="manage-expense.html"><em class="fa fa-dashboard">&nbsp;</em> Manage Expense</a>
+            <a class="active" href="expense-datewise-reports.html"><em class="fa fa-dashboard">&nbsp;</em> Datewise Expenses</a>
+            <a class="active" href="logout.html"><em class="fa fa-dashboard">&nbsp;</em> Logout</a>
+        </div>
+    </div>
+
+    <!-- Main Content (Static) -->
+    <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+        <div class="panel panel-default">
+            <div class="panel-heading" style="background-color:#8a2be2; color:white;" align="center">
+                Datewise Expense Report
+            </div>
+            <div class="panel-body">
+                <!-- Placeholder for message -->
+                <p style="font-size:16px; color:red" align="center"></p>
+
+                <div class="col-md-12">
+                    <form role="form" method="post" action="expense-datewise-reports-detailed.html" name="bwdatesreport">
+                        <div class="form-group">
+                            <label>From Date</label>
+                            <input class="form-control" type="date" id="fromdate" name="fromdate" required="true">
+                        </div>
+                        <div class="form-group">
+                            <label>To Date</label>
+                            <input class="form-control" type="date" id="todate" name="todate" required="true">
+                        </div>
+
+                        <div class="form-group has-success" align="center">
+                            <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

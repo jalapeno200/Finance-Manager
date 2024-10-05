@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Expense Tracker || Manage Expense</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+
+    <!-- Sidebar (Static) -->
+    <div style="background-color:#8a2be2;color:white" id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+        <div class="profile-sidebar">
+            <div class="profile-usertitle">
+                <div class="profile-usertitle-name" align="center">
+                    <h3><i class="fas fa-user-circle"></i>&nbsp;John Doe</h3>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <a class="active" href="dashboard.html">&nbsp; Dashboard</a>
+            <a class="active" href="add-expense.html"><em class="fa fa-dashboard">&nbsp;</em> Add Expenses</a>
+            <a class="active" href="manage-expense.html"><em class="fa fa-dashboard">&nbsp;</em> Manage Expense</a>
+            <a class="active" href="expense-datewise-reports.html"><em class="fa fa-dashboard">&nbsp;</em> Datewise Expenses</a>
+            <a class="active" href="logout.html"><em class="fa fa-dashboard">&nbsp;</em> Logout</a>
+        </div>
+    </div>
+
+    <!-- Main Content (Static) -->
+    <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+        <div class="panel panel-default">
+            <div class="panel-heading" style="background-color:#8a2be2; color:white;" align="center">
+                Manage Expenses
+            </div>
+            <div class="panel-body">
+                <!-- Alert placeholder -->
+                <p style="font-size:16px; color:red" align="center">
+                    <!-- Placeholder for any messages -->
+                </p>
+
+                <!-- Table of Expenses -->
+                <div class="table-responsive">
+                    <table class="table table-bordered mg-b-0">
+                        <thead>
+                            <tr>
+                                <th>S.NO</th>
+                                <th>Expense Item</th>
+                                <th>Expense Cost</th>
+                                <th>Expense Date</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Static placeholder for expense data -->
+                            <tr>
+                                <td>1</td>
+                                <td>Groceries</td>
+                                <td>$50</td>
+                                <td>2024-10-01</td>
+                                <td><a href="#">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Utilities</td>
+                                <td>$120</td>
+                                <td>2024-10-02</td>
+                                <td><a href="#">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Rent</td>
+                                <td>$900</td>
+                                <td>2024-10-03</td>
+                                <td><a href="#">Delete</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
